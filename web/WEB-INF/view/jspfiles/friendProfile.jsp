@@ -12,11 +12,11 @@
                 <c:url var="photoUrl" value="/user/showProfilePhoto/${friend.userId}"/>
                 <img src="${photoUrl}" width="60" height="70"/>&nbsp;
             </c:if>
-            <b>${friend.firstName}&nbsp;${friend.lastName}</b>
+            <b>${friend.firstName} &nbsp; ${friend.lastName}</b>
         </td>
         <td>
             <c:url var="about" value="/friends/about/${friend.userId}"/>
-            <a class="menulink" href="${about}">&nbsp;About&nbsp</a>
+            <a class="menulink" href="${about}">About</a>
         </td>
         <td>
             <c:url var="unFriend" value="/friends/unFriend/${friend.userId}"/>
@@ -52,7 +52,7 @@
             <c:forEach var="post" items="${friendsPost}">
                 <table class="postDetails">
                     <tr>
-                        <td class="userName"><b>${post.postBy.firstName}$nbsp;${post.postBy.lastName}</b></td>
+                        <td class="userName"><b>${post.postBy.firstName} &nbsp;${post.postBy.lastName}</b></td>
                         <td class="date">${post.date}</td>
                     </tr>
                     <tr>
@@ -71,7 +71,7 @@
                 <c:forEach var="commentList" items="${post.commentList}">
                     <table class="commentTable">
                         <tr>
-                            <td class="userName"><b>${commentList.commentBy.firstName}&nbsp;${commentList.commentBy.firstName}</b></td>
+                            <td class="userName"><b>${commentList.commentBy.firstName} &nbsp; ${commentList.commentBy.lastName}</b></td>
                             <td class="date">${commentList.date}</td>
                         </tr>
                         <tr>
